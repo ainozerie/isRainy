@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Mono';
+    user-select: none;
+}
+:root {
+    --black: #03071e;
+    --dark: #14213d;
+    --darkblue: #023e8a;
+    --blue: #0077b6;
+    --lightblue: #0096c7;
+    --sea: #00b4d8;
+    --lightsea: #48cae4;
+    --sky: #90e0ef;
+    --lightsky: #ade8f4;
+    --light: #caf0f8;
+    --white: #fffffc;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+header {
+    width: 80vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+header ul li {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--white);
+}
+.mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    color: var(--lightsky);
+    font-size: 20px;
+}
