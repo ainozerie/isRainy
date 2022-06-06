@@ -79,7 +79,7 @@ main {
     border: 2px solid var(--green);
     width: 380px;
     height: 40px;
-    padding-left: 10px;
+    padding-left: 15px;
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
     font-size: 20px;
@@ -155,12 +155,24 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 25px;
     background-position: center;
     background-size: cover;
 }
+.dataContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
 .data .card .information:hover {
     background-color: var(--transparent100);
+}
+.data .card .information:hover h2 {
+    font-size: 26px;
 }
 .data .card .information:hover p {
     opacity: 0;
@@ -170,6 +182,7 @@ main {
     margin-left: 15px;
 }
 .data .card .information h2 {
+    margin-top: 30px;
     width: 100%;
     text-align: center;
 }

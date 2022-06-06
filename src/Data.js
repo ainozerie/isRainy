@@ -17,13 +17,12 @@ export default function Data() {
             url={item.url}
             date={item.date} />
     })
-    
+    console.log(data);
 
     return (
         <div className='data'>
             
-            {!isLoading && data.length > 0 && dataToShow}
-            {isLoading && <p>Data loading ...</p>}
+            {data.length > 0 && dataToShow}
         </div>
     )
 }

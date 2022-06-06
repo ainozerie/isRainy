@@ -1,6 +1,8 @@
 {
     "API_KEY": "a4467d851ced4bb0a2d80214220506",
-    "weather_url": "http://api.weatherapi.com/v1/current.json?",
+    "weather_today": "http://api.weatherapi.com/v1/current.json?",
+    "weather_yesterday": "http://api.weatherapi.com/v1/history.json?",
+    "weather_tomorrow": "http://api.weatherapi.com/v1/forecast.json?",
     "picture_url": "https://api.unsplash.com/search/photos",
     "ACCESS_KEY": "WzoVB1I-FrGs82VC-k0_-VV4-Za4o_auaxzSaZrZd6c"
 }
