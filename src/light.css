@@ -12,10 +12,15 @@
     --grey: #f8f9fa;
     --white: #ffffff;
     --red: #ef233c;
+    --yellow: #FFD166;
+    --darkblue: #073B4C;
     --darkred: #d90429;
     --green: #06d6a0;
     --darkgreen: #05C793;
     --lightgray: lightgray;
+    --darkgray: #343a40;
+    --transparent50: rgba(255, 255, 255, 0.9);
+    --transparent100: rgba(211, 211, 211, 0.064);
 
 }
 body {
@@ -60,8 +65,10 @@ main {
     width: 80vw;
     height: 90vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 25px;
 }
 .searchContainer {
     display: flex;
@@ -78,6 +85,7 @@ main {
     font-size: 20px;
     outline: none;
     user-select: auto;
+    box-shadow: 0px 2px 4px 0 var(--lightgray);
 }
 .search input::placeholder {
     color: var(--lightgray);
@@ -94,6 +102,8 @@ main {
     color: var(--black);
     background-color: var(--green);
     cursor: pointer;
+    box-shadow: 2px 2px 4px 0 var(--lightgray);
+
 }
 .search button:disabled {
     color: var(--white);
@@ -103,6 +113,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    
 }
 .period button {
     border: none;
@@ -110,8 +121,69 @@ main {
     font-size: 15px;
     color: var(--lightgray);
     cursor: pointer;
+    
 }
 .period button:disabled {
+    color: var(--darkblue);
+}
+.data {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.data .card {
+    width: 250px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px 0 var(--lightgray);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.data .card .information {
+    height: 250px;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--transparent50);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-position: center;
+    background-size: cover;
+}
+.data .card .information:hover {
+    background-color: var(--transparent100);
+}
+.data .card .information:hover p {
+    opacity: 0;
+}
+.data .card .information p {
+    color: var(--darkgray);
+    margin-left: 15px;
+}
+.data .card .information h2 {
+    width: 100%;
+    text-align: center;
+}
+.data .card .date {
+    height: 30px;
+    width: 100%;
+    background-color: var(--yellow);
+    color: var(--white);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
     color: var(--black);
 }
 
@@ -121,4 +193,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+footer p {
+    color: var(--black);
 }

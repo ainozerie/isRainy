@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import Data from './Data';
 import Header from './Header';
 import './light.css';
 import Search from './Search';
@@ -14,7 +15,7 @@ function App() {
       <Header />
       <main>
         <Search />
-
+        <Data />
       </main>
       <footer><p>Created by Sergei Ainozerov</p></footer>
     </div>
