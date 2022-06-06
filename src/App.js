@@ -1,17 +1,13 @@
 import { useSelector } from 'react-redux';
 import Data from './Data';
 import Header from './Header';
-import './light.css';
+import './light.css'
 import Search from './Search';
 
 function App() {
-  
-  // const darkMode = useSelector(state => state.darkMode);
-  // (darkMode) ? import('./light.css') : import('./dark.css')
-
-
+  const darkMode = useSelector(state => state.darkMode)
   return (
-    <div>
+    <div className={darkMode ? 'app dark-theme' : 'app light-theme'}>
       <Header />
       <main>
         <Search />

@@ -5,10 +5,11 @@ import Card from './Card'
 export default function Data() {
     const isLoading = useSelector(state => state.isLoading)
     const data = useSelector(state => state.data)
-    console.log(data);
+
+    if (data.length > 3) data.shift(); // limits amount of cards to show
     const dataToShow = data.map(item => {
         return <Card 
-            key={item.text + item.temp} 
+            key={item.key} 
             text={item.text} 
             temp={item.temp} 
             feelslike={item.feelslike} 
@@ -17,10 +18,9 @@ export default function Data() {
             url={item.url}
             date={item.date} />
     })
-    console.log(data);
 
     return (
-        <div className='data'>
+        <div className={`data ${data.length > 0 ? 'showinfo' : ''}`}>
             
             {data.length > 0 && dataToShow}
         </div>

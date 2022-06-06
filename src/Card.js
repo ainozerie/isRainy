@@ -12,7 +12,7 @@ export default function Card(props) {
                     <p>The wind {props.wind}m/s</p>
                 </div>
             </div>
-            <div className='date'>{props.date}</div>
+            <div className={`date ${props.date}`}>{props.date}</div>
 
         </div>
     )

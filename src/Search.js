@@ -18,12 +18,16 @@ export default function Search() {
         getWeather(input).then(async (res) => {
             const url = await getURL(input);
             res.url = url;
+            res.key = getRandomInt(10000);
             dispath({type: 'DATA', payload: res})
             dispath({type: 'LOADING', payload: false});
             setInput('');
         })
         
     }
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
     const getWeather = async (city) => {
         let params;
         let dt;
@@ -105,7 +109,7 @@ export default function Search() {
             page: '1'
         }
         const res = await axios(config.picture_url, {params});
-        console.log(2);
+        console.log(res);
         return res.data.results[0].urls.small;
     }
 
