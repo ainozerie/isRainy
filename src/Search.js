@@ -20,7 +20,7 @@ export default function Search() {
             res.url = url;
             res.key = getRandomInt(10000);
             dispath({type: 'DATA', payload: res})
-            dispath({type: 'LOADING', payload: false});
+            setTimeout(() => dispath({type: 'LOADING', payload: false}), 500);
             setInput('');
         })
         
