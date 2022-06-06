@@ -1,6 +1,6 @@
 const initialState = {
     darkMode: false,
-    period: 'now',
+    period: 'today',
     isLoading: false,
     data: []
 }

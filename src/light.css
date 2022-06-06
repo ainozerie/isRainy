@@ -184,7 +184,7 @@ main {
     gap: 25px;
     background-position: center;
     background-size: cover;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
     animation-name: slidein;
 }
 .dataContainer {
@@ -212,7 +212,7 @@ main {
     margin-top: 30px;
     width: 100%;
     text-align: center;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
     animation-name: slidein;
 }
 .data .card .date {
@@ -248,11 +248,11 @@ footer p {
     color: var(--mode);
 }
 .data .card {
-    animation-duration: 1s;
+    animation-duration: 0.3s;
     animation-name: slidein;
 }
 .showinfo {
-    animation-duration: 0.5s;
+    animation-duration: 0.15s;
     animation-name: showinfo;
 }
   
@@ -308,16 +308,16 @@ footer p {
     .data .card:last-child {
         display: flex;
         animation: slideinMob;
-        animation-duration: 1s;
+        animation-duration: 0.3s;
     }
     .data .card .information {
         animation: slideinMob;
-        animation-duration: 1s;
+        animation-duration: 0.3s;
     }
     .data .card .information h2 {
         width: 350px;
         animation: slideinMob;
-        animation-duration: 1s;
+        animation-duration: 0.3s;
     }
     
 }

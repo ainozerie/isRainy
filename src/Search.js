@@ -15,7 +15,23 @@ export default function Search() {
     }
     const clickHandler = () => {
         dispath({type: 'LOADING', payload: true})
-        getWeather(input).then(async (res) => {
+        getWeather(input, 'now').then(async (res) => {
+            const url = await getURL(input);
+            res.url = url;
+            res.key = getRandomInt(10000);
+            dispath({type: 'DATA', payload: res})
+            setTimeout(() => dispath({type: 'LOADING', payload: false}), 500);
+            setInput('');
+        })
+        getWeather(input, 'yesterday').then(async (res) => {
+            const url = await getURL(input);
+            res.url = url;
+            res.key = getRandomInt(10000);
+            dispath({type: 'DATA', payload: res})
+            setTimeout(() => dispath({type: 'LOADING', payload: false}), 500);
+            setInput('');
+        })
+        getWeather(input, 'tomorrow').then(async (res) => {
             const url = await getURL(input);
             res.url = url;
             res.key = getRandomInt(10000);
@@ -28,10 +44,10 @@ export default function Search() {
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
       }
-    const getWeather = async (city) => {
+    const getWeather = async (city, day) => {
         let params;
         let dt;
-        switch(period) {
+        switch(day) {
             case 'now':
                 params = {
                     key: config.API_KEY,
@@ -121,7 +137,7 @@ export default function Search() {
             </div>
             <div className='period'>
                 <Label name='yesterday' />
-                <Label name='now' />
+                <Label name='today' />
                 <Label name='tomorrow' />
             </div>
         </div>

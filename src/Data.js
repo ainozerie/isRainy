@@ -4,10 +4,13 @@ import Card from './Card'
 
 export default function Data() {
     const isLoading = useSelector(state => state.isLoading)
+    const period = useSelector(state => state.period)
     const data = useSelector(state => state.data)
+    console.log(data);
+    const filteredData = data.filter(item => item.date.toLowerCase() === period);
 
-    if (data.length > 3) data.shift(); // limits amount of cards to show
-    const dataToShow = data.map(item => {
+    if (filteredData.length > 3) filteredData.shift(); // limits amount of cards to show
+    const dataToShow = filteredData.map(item => {
         return <Card 
             key={item.key} 
             text={item.text} 
